@@ -1,0 +1,128 @@
+/* Navbar.css - The Core Luminous Design System */
+
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(252, 253, 252, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #F5F2E8;
+    z-index: 1000;
+    box-shadow: 0 1px 10px rgba(26, 46, 58, 0.03);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo/Brand */
+.brand {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #1A2E3A; /* Deep Abyssal */
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1A2E3A; /* Deep Abyssal */
+    font-weight: 300;
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #9BC1D5; /* Horizon Azure */
+}
+
+/* Underline animation for regular links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #9BC1D5; /* Horizon Azure */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Primary CTA Button */
+.nav-link.cta {
+    padding: 0.65rem 1.8rem;
+    background: #9BC1D5; /* Horizon Azure */
+    color: #FCFDFC; /* Crystalline White */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-link.cta::after {
+    display: none;
+}
+
+.nav-link.cta:hover {
+    background: #D4C19C; /* Shimmer Gold */
+    color: #1A2E3A; /* Deep Abyssal */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(155, 193, 213, 0.25);
+}
+
+/* Decorative gradient line */
+.nav-accent {
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(155, 193, 213, 0.3) 50%,
+        transparent
+    );
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .nav-link.cta {
+        padding: 0.5rem 1.2rem;
+    }
+}
