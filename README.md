@@ -1,6 +1,7 @@
 # 🌊 The Luminary Shores - Luxury Hotel Website
 
 A modern, responsive **React** website for The Luminary Shores luxury hotel, featuring elegant UI design, a dynamic carousel, and smooth user interactions.
+Project Demo Link : https://the-luminary-shores.vercel.app/
 
 ## ✨ Features
 
